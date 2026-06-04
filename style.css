@@ -813,3 +813,826 @@ body.offcanvas-open {
 .offcanvas-open .fixed-top {
     padding-right: 0 !important;
 }
+
+
+/* =========================================
+   COMMON SECTION STYLES
+========================================= */
+
+section {
+    padding: 8rem 0;
+}
+
+.section-title {
+    font-family: 'Sacramento', cursive;
+    font-size: 4.8rem;
+    color: var(--pink);
+    margin-bottom: 1rem;
+    text-shadow: 0 0 20px rgba(241, 78, 149, 0.15);
+}
+
+.section-subtitle {
+    font-size: 0.95rem;
+    color: rgba(255, 255, 255, 0.6);
+    letter-spacing: 0.08em;
+    max-width: 600px;
+    margin: 0 auto;
+    line-height: 1.6;
+}
+
+/* =========================================
+   INFO SECTION — Glassmorphic Cards
+========================================= */
+
+.info {
+    background-color: var(--bg);
+    color: white;
+    position: relative;
+    z-index: 1;
+}
+
+.info::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(circle at 80% 20%, rgba(241, 78, 149, 0.06), transparent 50%),
+                radial-gradient(circle at 10% 80%, rgba(241, 78, 149, 0.05), transparent 50%);
+    z-index: -1;
+}
+
+.info-card {
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(255, 255, 255, 0.06);
+    border-radius: 16px;
+    padding: 3rem 2rem;
+    text-align: center;
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.info-card:hover {
+    transform: translateY(-8px);
+    border-color: rgba(241, 78, 149, 0.35);
+    background: rgba(241, 78, 149, 0.03);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4), 
+                0 0 20px rgba(241, 78, 149, 0.1);
+}
+
+.info-icon-wrapper {
+    width: 68px;
+    height: 68px;
+    border-radius: 50%;
+    background: rgba(241, 78, 149, 0.12);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 1.8rem;
+    border: 1px solid rgba(241, 78, 149, 0.25);
+    transition: all 0.3s ease;
+}
+
+.info-card:hover .info-icon-wrapper {
+    transform: scale(1.1);
+    background: var(--pink);
+    border-color: var(--pink);
+}
+
+.info-icon {
+    color: var(--pink);
+    font-size: 1.8rem;
+    transition: all 0.3s ease;
+}
+
+.info-card:hover .info-icon {
+    color: white;
+}
+
+.info-title {
+    font-size: 1.6rem;
+    font-weight: 600;
+    letter-spacing: 0.05em;
+    margin-bottom: 1.5rem;
+    color: white;
+}
+
+.info-details {
+    margin-bottom: 2rem;
+    flex-grow: 1;
+}
+
+.info-details p {
+    font-size: 0.9rem;
+    color: rgba(255, 255, 255, 0.7);
+    line-height: 1.6;
+    margin-bottom: 0.8rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.6rem;
+}
+
+.info-details p i {
+    color: var(--pink);
+    font-size: 1rem;
+}
+
+.info-details .info-address {
+    display: block;
+    margin-top: 1rem;
+    padding-top: 1rem;
+    border-top: 1px dashed rgba(255, 255, 255, 0.1);
+    font-size: 0.85rem;
+    color: rgba(255, 255, 255, 0.55);
+}
+
+.info-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 0.7rem;
+    font-weight: 700;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: white;
+    text-decoration: none;
+    background: rgba(241, 78, 149, 0.2);
+    border: 1px solid rgba(241, 78, 149, 0.4);
+    padding: 0.75rem 1.8rem;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+}
+
+.info-btn:hover {
+    background: var(--pink);
+    border-color: var(--pink);
+    color: white;
+    box-shadow: 0 4px 12px rgba(241, 78, 149, 0.3);
+}
+
+.map-embed-wrapper {
+    border-radius: 16px;
+    overflow: hidden;
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    box-shadow: 0 16px 40px rgba(0, 0, 0, 0.3);
+}
+
+/* =========================================
+   STORY SECTION — Timeline
+========================================= */
+
+.story {
+    background: #0f0f0f;
+    color: white;
+    position: relative;
+}
+
+.timeline {
+    list-style: none;
+    padding: 0;
+    position: relative;
+}
+
+/* Garis tengah timeline */
+.timeline::before {
+    top: 0;
+    bottom: 0;
+    position: absolute;
+    content: " ";
+    width: 2px;
+    background-color: rgba(241, 78, 149, 0.2);
+    left: 50%;
+    margin-left: -1px;
+}
+
+.timeline > li {
+    margin-bottom: 50px;
+    position: relative;
+}
+
+.timeline > li::before,
+.timeline > li::after {
+    content: " ";
+    display: table;
+}
+
+.timeline > li::after {
+    clear: both;
+}
+
+/* Panel konten timeline */
+.timeline > li > .timeline-panel {
+    width: 46%;
+    float: left;
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    border-radius: 12px;
+    padding: 2.2rem;
+    position: relative;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease;
+}
+
+.timeline > li > .timeline-panel:hover {
+    border-color: rgba(241, 78, 149, 0.3);
+    background: rgba(255, 255, 255, 0.04);
+}
+
+/* Segitiga penunjuk panel */
+.timeline > li > .timeline-panel::before {
+    position: absolute;
+    top: 26px;
+    right: -15px;
+    display: inline-block;
+    border-top: 15px solid transparent;
+    border-left: 15px solid rgba(255, 255, 255, 0.03);
+    border-right: 0 solid rgba(255, 255, 255, 0.03);
+    border-bottom: 15px solid transparent;
+    content: " ";
+}
+
+/* Lingkaran / Gambar penanda waktu di tengah */
+.timeline > li > .timeline-img {
+    width: 60px;
+    height: 60px;
+    position: absolute;
+    left: 50%;
+    margin-left: -30px;
+    top: 10px;
+    z-index: 10;
+    background-size: cover;
+    background-position: center;
+    border-radius: 50%;
+    border: 3px solid rgba(241, 78, 149, 0.6);
+    box-shadow: 0 0 15px rgba(241, 78, 149, 0.4);
+    background-color: var(--bg);
+}
+
+/* Elemen terbalik (Kanan) */
+.timeline > li.timeline-inverted > .timeline-panel {
+    float: right;
+}
+
+.timeline > li.timeline-inverted > .timeline-panel::before {
+    border-left-width: 0;
+    border-right-width: 15px;
+    border-right-color: rgba(255, 255, 255, 0.03);
+    left: -15px;
+    right: auto;
+}
+
+.timeline-title {
+    font-size: 1.3rem;
+    font-weight: 600;
+    color: white;
+    margin-bottom: 0.4rem;
+}
+
+.timeline-date {
+    font-size: 0.72rem;
+    font-weight: 700;
+    letter-spacing: 0.15em;
+    color: var(--pink);
+    text-transform: uppercase;
+    display: inline-block;
+    margin-bottom: 1rem;
+}
+
+.timeline-body p {
+    font-size: 0.85rem;
+    color: rgba(255, 255, 255, 0.65);
+    line-height: 1.7;
+    margin: 0;
+}
+
+/* =========================================
+   GALLERY SECTION — Bento Grid & Lightbox
+========================================= */
+
+.gallery {
+    background: var(--bg);
+    color: white;
+}
+
+.gallery-grid {
+    perspective: 1000px;
+}
+
+.gallery-item {
+    position: relative;
+    border-radius: 12px;
+    overflow: hidden;
+    cursor: pointer;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+    aspect-ratio: 4/3;
+    border: 1px solid rgba(255,255,255,0.05);
+    transition: all 0.45s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.gallery-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.gallery-overlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(10, 10, 10, 0.6);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: opacity 0.4s ease;
+    z-index: 1;
+}
+
+.overlay-icon {
+    font-size: 2.2rem;
+    color: var(--pink);
+    transform: scale(0.6);
+    transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.gallery-item:hover {
+    transform: translateY(-6px);
+    border-color: rgba(241, 78, 149, 0.45);
+    box-shadow: 0 16px 40px rgba(241, 78, 149, 0.15);
+}
+
+.gallery-item:hover .gallery-img {
+    transform: scale(1.08);
+}
+
+.gallery-item:hover .gallery-overlay {
+    opacity: 1;
+}
+
+.gallery-item:hover .overlay-icon {
+    transform: scale(1);
+}
+
+/* Lightbox Modal CSS */
+.lightbox-modal {
+    display: none;
+    position: fixed;
+    z-index: 2000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(10, 10, 10, 0.95);
+    backdrop-filter: blur(8px);
+}
+
+.lightbox-close {
+    position: absolute;
+    top: 20px;
+    right: 30px;
+    color: #f1f1f1;
+    font-size: 40px;
+    font-weight: bold;
+    transition: 0.3s;
+    cursor: pointer;
+    z-index: 2100;
+}
+
+.lightbox-close:hover,
+.lightbox-close:focus {
+    color: var(--pink);
+    text-decoration: none;
+}
+
+.lightbox-content-wrapper {
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 80%;
+    max-width: 800px;
+    height: 100%;
+    padding: 40px 0;
+}
+
+.lightbox-content {
+    max-width: 100%;
+    max-height: 70vh;
+    object-fit: contain;
+    border-radius: 4px;
+    border: 1px solid rgba(255,255,255,0.1);
+    box-shadow: 0 24px 70px rgba(0,0,0,0.6);
+    animation: zoom 0.3s ease-out;
+}
+
+@keyframes zoom {
+    from {transform:scale(0.9); opacity: 0;}
+    to {transform:scale(1); opacity: 1;}
+}
+
+.lightbox-caption {
+    margin-top: 15px;
+    color: #ccc;
+    font-size: 0.85rem;
+    letter-spacing: 0.05em;
+    text-align: center;
+}
+
+/* Navigasi Lightbox */
+.lightbox-prev,
+.lightbox-next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    padding: 16px;
+    margin-top: -50px;
+    color: white;
+    font-weight: bold;
+    font-size: 24px;
+    transition: 0.3s ease;
+    border-radius: 50%;
+    user-select: none;
+    -webkit-user-select: none;
+    text-decoration: none;
+    z-index: 2050;
+}
+
+.lightbox-prev { left: 20px; }
+.lightbox-next { right: 20px; }
+
+.lightbox-prev:hover,
+.lightbox-next:hover {
+    background-color: rgba(241, 78, 149, 0.4);
+    color: white;
+}
+
+/* =========================================
+   RSVP & GUEST BOOK SECTION
+========================================= */
+
+.rsv {
+    background: #0d0d0d;
+    color: white;
+}
+
+.rsv-card {
+    background: rgba(255, 255, 255, 0.02);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    border-radius: 16px;
+    padding: 3rem 2.2rem;
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    box-shadow: 0 20px 50px rgba(0,0,0,0.3);
+}
+
+.rsv-card .form-label {
+    font-size: 0.72rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    color: rgba(255, 255, 255, 0.7);
+    margin-bottom: 0.6rem;
+}
+
+.rsv-card .form-control,
+.rsv-card .form-select {
+    background: rgba(255, 255, 255, 0.04);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    color: white;
+    font-size: 0.85rem;
+    padding: 0.75rem 1rem;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+}
+
+.rsv-card .form-control:focus,
+.rsv-card .form-select:focus {
+    background: rgba(255, 255, 255, 0.06);
+    border-color: var(--pink);
+    box-shadow: 0 0 12px rgba(241, 78, 149, 0.25);
+    outline: none;
+}
+
+.rsv-card .form-select option {
+    background: #0d0d0d;
+    color: white;
+}
+
+.rsv-card .form-check-label {
+    font-size: 0.85rem;
+    color: rgba(255, 255, 255, 0.8);
+    cursor: pointer;
+}
+
+.rsv-card .form-check-input {
+    cursor: pointer;
+}
+
+.rsv-card .form-check-input:checked {
+    background-color: var(--pink);
+    border-color: var(--pink);
+}
+
+.rsv-submit-btn {
+    font-size: 0.72rem;
+    font-weight: 700;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: white;
+    background: var(--pink);
+    border: 1px solid var(--pink);
+    padding: 0.9rem 2rem;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    box-shadow: 0 8px 24px rgba(241, 78, 149, 0.2);
+}
+
+.rsv-submit-btn:hover {
+    background: transparent;
+    color: var(--pink);
+    box-shadow: 0 8px 30px rgba(241, 78, 149, 0.1);
+}
+
+/* Guestbook List Container */
+.guestbook-container {
+    background: rgba(255, 255, 255, 0.02);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    border-radius: 16px;
+    padding: 2.2rem;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 20px 50px rgba(0,0,0,0.3);
+}
+
+.guestbook-title {
+    font-size: 1.1rem;
+    font-weight: 700;
+    letter-spacing: 0.05em;
+    margin-bottom: 1.8rem;
+    color: white;
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+    border-bottom: 1px solid rgba(255,255,255,0.06);
+    padding-bottom: 1rem;
+}
+
+.guestbook-title i {
+    color: var(--pink);
+}
+
+.guestbook-list {
+    flex-grow: 1;
+    overflow-y: auto;
+    max-height: 380px;
+    padding-right: 0.4rem;
+}
+
+/* Custom scrollbar */
+.guestbook-list::-webkit-scrollbar {
+    width: 4px;
+}
+.guestbook-list::-webkit-scrollbar-track {
+    background: rgba(255, 255, 255, 0.02);
+}
+.guestbook-list::-webkit-scrollbar-thumb {
+    background: rgba(241, 78, 149, 0.2);
+    border-radius: 10px;
+}
+.guestbook-list::-webkit-scrollbar-thumb:hover {
+    background: var(--pink);
+}
+
+.guestbook-item {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+    background: rgba(255, 255, 255, 0.02);
+    padding: 1.2rem;
+    border-radius: 12px;
+    border: 1px solid rgba(255, 255, 255, 0.03);
+    animation: slideIn 0.4s ease-out;
+}
+
+@keyframes slideIn {
+    from {opacity: 0; transform: translateY(12px);}
+    to {opacity: 1; transform: translateY(0);}
+}
+
+.guestbook-avatar {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: rgba(241, 78, 149, 0.15);
+    border: 1px solid rgba(241, 78, 149, 0.3);
+    color: var(--pink);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    font-size: 0.85rem;
+    flex-shrink: 0;
+}
+
+.guestbook-content {
+    flex-grow: 1;
+}
+
+.guestbook-header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 0.2rem;
+}
+
+.guestbook-name {
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: white;
+}
+
+.guestbook-time {
+    font-size: 0.65rem;
+    color: rgba(255, 255, 255, 0.4);
+    display: block;
+    margin-bottom: 0.6rem;
+}
+
+.guestbook-message {
+    font-size: 0.82rem;
+    color: rgba(255, 255, 255, 0.7);
+    line-height: 1.5;
+    margin: 0;
+}
+
+/* =========================================
+   GIFTS SECTION — Digital Envelope
+========================================= */
+
+.gifts {
+    background: var(--bg);
+    color: white;
+}
+
+.gift-card {
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    border-radius: 16px;
+    padding: 3rem 2rem;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    transition: all 0.4s ease;
+}
+
+.gift-card:hover {
+    transform: translateY(-6px);
+    border-color: rgba(241, 78, 149, 0.35);
+    background: rgba(241, 78, 149, 0.03);
+    box-shadow: 0 16px 36px rgba(0,0,0,0.3);
+}
+
+.gift-logo-wrapper {
+    height: 52px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 1.6rem;
+}
+
+.bank-badge {
+    font-size: 1.4rem;
+    font-weight: 800;
+    letter-spacing: 0.1em;
+    color: #0d47a1;
+    background: #e3f2fd;
+    padding: 0.3rem 1rem;
+    border-radius: 4px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+.bank-badge.mandiri {
+    color: #0d215c;
+    background: #ffeb3b;
+}
+
+.account-name {
+    font-size: 1rem;
+    font-weight: 700;
+    color: white;
+    margin-bottom: 0.4rem;
+}
+
+.account-number {
+    font-size: 1.3rem;
+    font-weight: 500;
+    color: var(--pink);
+    letter-spacing: 0.05em;
+    margin-bottom: 1.8rem;
+}
+
+.account-address {
+    font-size: 0.8rem;
+    line-height: 1.5;
+    color: rgba(255,255,255,0.6);
+    margin-bottom: 1.8rem;
+    max-width: 220px;
+    text-align: center;
+}
+
+.gift-copy-btn {
+    font-size: 0.68rem;
+    font-weight: 700;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: rgba(255,255,255,0.8);
+    background: transparent;
+    border: 1px solid rgba(255,255,255,0.2);
+    padding: 0.6rem 1.4rem;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+}
+
+.gift-copy-btn:hover {
+    color: white;
+    border-color: var(--pink);
+    background: rgba(241, 78, 149, 0.1);
+}
+
+/* =========================================
+   RESPONSIVE DESIGN ADAPTATIONS
+========================================= */
+
+@media (max-width: 992px) {
+    .timeline::before {
+        left: 40px;
+    }
+
+    .timeline > li > .timeline-panel {
+        width: calc(100% - 90px);
+        float: right;
+    }
+
+    .timeline > li > .timeline-panel::before {
+        border-left-width: 0;
+        border-right-width: 15px;
+        border-right-color: rgba(255, 255, 255, 0.03);
+        left: -15px;
+        right: auto;
+    }
+
+    .timeline > li > .timeline-img {
+        left: 40px;
+        margin-left: -30px;
+    }
+}
+
+@media (max-width: 576px) {
+    section {
+        padding: 5rem 0;
+    }
+
+    .section-title {
+        font-size: 3.6rem;
+    }
+
+    .info-card, .rsv-card, .guestbook-container, .gift-card {
+        padding: 2.2rem 1.5rem;
+    }
+
+    .timeline::before {
+        left: 30px;
+    }
+
+    .timeline > li > .timeline-img {
+        left: 30px;
+        width: 50px;
+        height: 50px;
+        margin-left: -25px;
+    }
+
+    .timeline > li > .timeline-panel {
+        width: calc(100% - 70px);
+        padding: 1.5rem;
+    }
+
+    .timeline > li > .timeline-panel::before {
+        top: 20px;
+    }
+}

@@ -11,6 +11,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Sacramento&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
     <link rel="stylesheet" href="style.css">
 </head>
 
@@ -122,6 +123,7 @@
     </div>
 
     <!-- =================== HOME =================== -->
+    <div id="undangan"></div>
     <section id="home" class="home">
       <div class="container d-flex align-items-center justify-content-center" style="min-height:100vh;">
         <div class="home-card">
@@ -152,6 +154,328 @@
         </div>
       </div>
     </section>
+
+    <!-- =================== INFO =================== -->
+    <section id="info" class="info">
+      <div class="container">
+        <div class="row justify-content-center text-center">
+          <div class="col-md-8 col-10">
+            <h2 class="section-title">Informasi Acara</h2>
+            <p class="section-subtitle">Diharapkan kehadiran Bapak/Ibu/Saudara sekalian untuk menyaksikan ikatan suci kami.</p>
+          </div>
+        </div>
+
+        <div class="row justify-content-center mt-5 info-cards">
+          <!-- Akad Card -->
+          <div class="col-md-5 col-10 mb-4">
+            <div class="info-card">
+              <div class="info-icon-wrapper">
+                <i class="bi bi-bookmark-heart info-icon"></i>
+              </div>
+              <h3 class="info-title">Akad Nikah</h3>
+              <div class="info-details">
+                <p class="info-time"><i class="bi bi-clock"></i> 08.00 - 10.00 WIB</p>
+                <p class="info-date"><i class="bi bi-calendar-event"></i> Minggu, 12 Oktober 2030</p>
+                <p class="info-address"><i class="bi bi-geo-alt"></i> <strong>Masjid Raya Al-Jabbar</strong><br>Jl. Cimencrang No.14, Cimenerang, Kec. Gedebage, Kota Bandung, Jawa Barat 40292</p>
+              </div>
+              <a href="https://maps.app.goo.gl/yFwW42gMeb4L2wV47" target="_blank" class="info-btn"><i class="bi bi-map"></i> Buka Peta Lokasi</a>
+            </div>
+          </div>
+
+          <!-- Resepsi Card -->
+          <div class="col-md-5 col-10 mb-4">
+            <div class="info-card">
+              <div class="info-icon-wrapper">
+                <i class="bi bi-suit-heart info-icon"></i>
+              </div>
+              <h3 class="info-title">Resepsi</h3>
+              <div class="info-details">
+                <p class="info-time"><i class="bi bi-clock"></i> 11.00 - Selesai</p>
+                <p class="info-date"><i class="bi bi-calendar-event"></i> Minggu, 12 Oktober 2030</p>
+                <p class="info-address"><i class="bi bi-geo-alt"></i> <strong>Harris Hotel & Conventions Festival Citylink</strong><br>Jl. Peta No.241, Pasir Koja, Kec. Babakan Ciparay, Kota Bandung, Jawa Barat 40232</p>
+              </div>
+              <a href="https://maps.app.goo.gl/9Z4XWf1p84nDr4V28" target="_blank" class="info-btn"><i class="bi bi-map"></i> Buka Peta Lokasi</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Google Maps Embed -->
+        <div class="row justify-content-center mt-4">
+          <div class="col-md-10 col-11">
+            <div class="map-embed-wrapper">
+              <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3960.54877395015!2d107.61869507577548!3d-6.944410193055743!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e68e88bb5d706a1%3A0xe54e600572e9d249!2sHARRIS%20Hotel%20%26%20Conventions%20Festival%20Citylink%20Bandung!5e0!3m2!1sid!2sid!4v1717520000000!5m2!1sid!2sid" width="100%" height="380" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =================== STORY =================== -->
+    <section id="story" class="story">
+      <div class="container">
+        <div class="row justify-content-center text-center">
+          <div class="col-md-8 col-10">
+            <h2 class="section-title">Cerita Kami</h2>
+            <p class="section-subtitle">Bagaimana kami dipertemukan dan melangkah bersama menuju ikatan suci.</p>
+          </div>
+        </div>
+
+        <div class="row mt-5">
+          <div class="col">
+            <ul class="timeline">
+              <!-- Item 1 -->
+              <li>
+                <div class="timeline-img" style="background-image: url(img/aa.jpg);"></div>
+                <div class="timeline-panel">
+                  <div class="timeline-heading">
+                    <h3 class="timeline-title">Pertama Bertemu</h3>
+                    <span class="timeline-date">10 Juli 2020</span>
+                  </div>
+                  <div class="timeline-body">
+                    <p>Tak sengaja kami dipertemukan dalam suatu kepanitiaan di kampus. Awalnya hanya obrolan formal seputar tugas organisasi, namun perlahan tumbuh kecocokan karena kesamaan selera musik dan pandangan hidup. Di situlah kisah kami dimulai.</p>
+                  </div>
+                </div>
+              </li>
+
+              <!-- Item 2 (Alternating) -->
+              <li class="timeline-inverted">
+                <div class="timeline-img" style="background-image: url(img/8796161770306366.jpg);"></div>
+                <div class="timeline-panel">
+                  <div class="timeline-heading">
+                    <h3 class="timeline-title">Menjalin Komitmen</h3>
+                    <span class="timeline-date">15 Oktober 2023</span>
+                  </div>
+                  <div class="timeline-body">
+                    <p>Setelah tiga tahun saling mengenal karakter satu sama lain dan melewati berbagai suka duka, kami memutuskan untuk menjalin komitmen serius. Menatap masa depan bersama dengan menyelaraskan impian dan tujuan hidup kami.</p>
+                  </div>
+                </div>
+              </li>
+
+              <!-- Item 3 -->
+              <li>
+                <div class="timeline-img" style="background-image: url(img/prewed.jpg);"></div>
+                <div class="timeline-panel">
+                  <div class="timeline-heading">
+                    <h3 class="timeline-title">Lamaran (Engagement)</h3>
+                    <span class="timeline-date">12 Mei 2029</span>
+                  </div>
+                  <div class="timeline-body">
+                    <p>Di hadapan kedua keluarga besar, kami mengikat janji suci pertunangan secara resmi. Langkah awal yang penuh haru dan doa untuk mempersiapkan hari bahagia kami menuju jenjang pernikahan pernikahan suci ini.</p>
+                  </div>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =================== GALLERY =================== -->
+    <section id="gallery" class="gallery">
+      <div class="container">
+        <div class="row justify-content-center text-center">
+          <div class="col-md-8 col-10">
+            <h2 class="section-title">Galeri Foto</h2>
+            <p class="section-subtitle">Sekilas potret kebersamaan kami dalam lensa keindahan.</p>
+          </div>
+        </div>
+
+        <div class="row justify-content-center mt-5 g-3 gallery-grid">
+          <!-- Item 1 -->
+          <div class="col-lg-4 col-md-6 col-12">
+            <div class="gallery-item" onclick="openLightbox(0)">
+              <img src="img/prewed.jpg" alt="Arya & Cika Prewed" class="img-fluid gallery-img">
+              <div class="gallery-overlay">
+                <i class="bi bi-heart-fill overlay-icon"></i>
+              </div>
+            </div>
+          </div>
+          <!-- Item 2 -->
+          <div class="col-lg-4 col-md-6 col-12">
+            <div class="gallery-item" onclick="openLightbox(1)">
+              <img src="img/8796161770306366.jpg" alt="Arya & Cika Moment" class="img-fluid gallery-img">
+              <div class="gallery-overlay">
+                <i class="bi bi-heart-fill overlay-icon"></i>
+              </div>
+            </div>
+          </div>
+          <!-- Item 3 -->
+          <div class="col-lg-4 col-md-6 col-12">
+            <div class="gallery-item" onclick="openLightbox(2)">
+              <img src="img/aa.jpg" alt="Arya & Cika Fun" class="img-fluid gallery-img">
+              <div class="gallery-overlay">
+                <i class="bi bi-heart-fill overlay-icon"></i>
+              </div>
+            </div>
+          </div>
+          <!-- Item 4 -->
+          <div class="col-lg-4 col-md-6 col-12">
+            <div class="gallery-item" onclick="openLightbox(3)">
+              <img src="img/ar.jpg" alt="Arya & Cika Hero" class="img-fluid gallery-img">
+              <div class="gallery-overlay">
+                <i class="bi bi-heart-fill overlay-icon"></i>
+              </div>
+            </div>
+          </div>
+          <!-- Item 5 -->
+          <div class="col-lg-4 col-md-6 col-12">
+            <div class="gallery-item" onclick="openLightbox(4)">
+              <img src="img/1.jpg" alt="Arya & Cika Home" class="img-fluid gallery-img">
+              <div class="gallery-overlay">
+                <i class="bi bi-heart-fill overlay-icon"></i>
+              </div>
+            </div>
+          </div>
+          <!-- Item 6 -->
+          <div class="col-lg-4 col-md-6 col-12">
+            <div class="gallery-item" onclick="openLightbox(5)">
+              <img src="img/priwid.jpg" alt="Arya & Cika Sweet" class="img-fluid gallery-img">
+              <div class="gallery-overlay">
+                <i class="bi bi-heart-fill overlay-icon"></i>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Lightbox Modal -->
+      <div id="customLightbox" class="lightbox-modal">
+        <span class="lightbox-close" onclick="closeLightbox()">&times;</span>
+        <div class="lightbox-content-wrapper">
+          <img class="lightbox-content" id="lightboxImg">
+          <div id="lightboxCaption" class="lightbox-caption"></div>
+        </div>
+        <a class="lightbox-prev" onclick="changeLightboxSlide(-1)">&#10094;</a>
+        <a class="lightbox-next" onclick="changeLightboxSlide(1)">&#10095;</a>
+      </div>
+    </section>
+
+    <!-- =================== RSVP & GUEST BOOK =================== -->
+    <section id="rsv" class="rsv">
+      <div class="container">
+        <div class="row justify-content-center text-center">
+          <div class="col-md-8 col-10">
+            <h2 class="section-title">RSVP & Ucapan</h2>
+            <p class="section-subtitle">Mohon konfirmasikan kehadiran Anda dan kirimkan doa restu untuk kami berdua.</p>
+          </div>
+        </div>
+
+        <div class="row justify-content-center mt-5 text-start">
+          <!-- Form Card -->
+          <div class="col-md-6 col-11 mb-5">
+            <div class="rsv-card">
+              <form id="rsvpForm" onsubmit="handleRSVPSubmit(event)">
+                <div class="mb-3">
+                  <label for="nama" class="form-label">Nama Lengkap</label>
+                  <input type="text" class="form-control" id="nama" placeholder="Masukkan nama Anda" required>
+                </div>
+                <div class="mb-3">
+                  <label for="jumlah" class="form-label">Jumlah Tamu</label>
+                  <select class="form-select" id="jumlah" required>
+                    <option value="" disabled selected>Pilih jumlah kehadiran</option>
+                    <option value="1">1 Orang</option>
+                    <option value="2">2 Orang</option>
+                    <option value="3">3 Orang</option>
+                    <option value="4">4 Orang</option>
+                  </select>
+                </div>
+                <div class="mb-3">
+                  <label class="form-label d-block">Konfirmasi Kehadiran</label>
+                  <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="radio" name="kehadiran" id="hadir" value="Hadir" checked required>
+                    <label class="form-check-label" for="hadir">Saya Akan Hadir</label>
+                  </div>
+                  <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="radio" name="kehadiran" id="absen" value="Tidak Hadir">
+                    <label class="form-check-label" for="absen">Maaf, Tidak Bisa Hadir</label>
+                  </div>
+                </div>
+                <div class="mb-4">
+                  <label for="ucapan" class="form-label">Ucapan & Doa Restu</label>
+                  <textarea class="form-control" id="ucapan" rows="4" placeholder="Tuliskan ucapan selamat dan doa Anda..." required></textarea>
+                </div>
+                <button type="submit" class="rsv-submit-btn w-100"><i class="bi bi-send"></i> Kirim Konfirmasi</button>
+              </form>
+            </div>
+          </div>
+
+          <!-- Guest Book Wish List -->
+          <div class="col-md-6 col-11 mb-5">
+            <div class="guestbook-container">
+              <h3 class="guestbook-title"><i class="bi bi-chat-heart"></i> Buku Tamu & Doa (<span id="guestbook-count">0</span>)</h3>
+              <div class="guestbook-list" id="guestbookList">
+                <!-- Wishes will be loaded here dynamically -->
+                <div class="text-center text-muted py-5" id="guestbookEmpty">
+                  <i class="bi bi-chat-quote" style="font-size: 2.5rem; opacity: 0.5;"></i>
+                  <p class="mt-2 text-center">Belum ada ucapan. Jadilah yang pertama memberikan doa!</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =================== GIFTS =================== -->
+    <section id="gifts" class="gifts">
+      <div class="container">
+        <div class="row justify-content-center text-center">
+          <div class="col-md-8 col-10">
+            <h2 class="section-title">Kado Digital</h2>
+            <p class="section-subtitle">Bagi yang ingin mengirimkan ucapan kasih atau tanda mata secara digital, dapat melalui rekening berikut ini.</p>
+          </div>
+        </div>
+
+        <div class="row justify-content-center mt-5 text-center g-4">
+          <!-- Bank BCA -->
+          <div class="col-md-4 col-10">
+            <div class="gift-card">
+              <div class="gift-logo-wrapper">
+                <span class="bank-badge">BCA</span>
+              </div>
+              <h4 class="account-name">Arya Wijaya</h4>
+              <p class="account-number" id="bcaNo">1234567890</p>
+              <button class="gift-copy-btn" onclick="copyToClipboard('1234567890', this)"><i class="bi bi-copy"></i> Salin No. Rekening</button>
+            </div>
+          </div>
+
+          <!-- Bank Mandiri -->
+          <div class="col-md-4 col-10">
+            <div class="gift-card">
+              <div class="gift-logo-wrapper">
+                <span class="bank-badge mandiri">MANDIRI</span>
+              </div>
+              <h4 class="account-name">Cika Ramadhani</h4>
+              <p class="account-number" id="mandiriNo">9876543210</p>
+              <button class="gift-copy-btn" onclick="copyToClipboard('9876543210', this)"><i class="bi bi-copy"></i> Salin No. Rekening</button>
+            </div>
+          </div>
+
+          <!-- Address -->
+          <div class="col-md-4 col-10">
+            <div class="gift-card">
+              <div class="gift-logo-wrapper">
+                <i class="bi bi-house-heart" style="font-size: 2.2rem; color: var(--pink);"></i>
+              </div>
+              <h4 class="account-name">Alamat Pengiriman Kado</h4>
+              <p class="account-address" id="giftAddress">Jl. Peta No. 241, Kec. Babakan Ciparay, Bandung</p>
+              <button class="gift-copy-btn" onclick="copyToClipboard('Jl. Peta No. 241, Kec. Babakan Ciparay, Bandung', this)"><i class="bi bi-copy"></i> Salin Alamat</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Toast Notification for Copying -->
+    <div class="toast-container position-fixed bottom-0 start-50 translate-middle-x p-3">
+      <div id="copyToast" class="toast align-items-center text-white bg-dark border-0" role="alert" aria-live="assertive" aria-atomic="true" data-bs-delay="2000">
+        <div class="d-flex">
+          <div class="toast-body">
+            <i class="bi bi-check-circle-fill text-success"></i> Berhasil disalin ke clipboard!
+          </div>
+        </div>
+      </div>
+    </div>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
@@ -207,6 +531,183 @@
             } else {
                 mainNavbar.classList.remove('scrolled');
             }
+        });
+
+        // Lightbox Gallery Logika
+        const galleryImages = [
+            'img/prewed.jpg',
+            'img/8796161770306366.jpg',
+            'img/aa.jpg',
+            'img/ar.jpg',
+            'img/1.jpg',
+            'img/priwid.jpg'
+        ];
+        const galleryCaptions = [
+            'Arya & Cika - Momen Kebersamaan Pre-wedding',
+            'Arya & Cika - Kebahagiaan Tak Terhingga',
+            'Arya & Cika - Canda dan Tawa Bersama',
+            'Arya & Cika - Janji Suci Dua Jiwa',
+            'Arya & Cika - Melangkah Bersama ke Masa Depan',
+            'Arya & Cika - Keindahan Cinta dalam Kesederhanaan'
+        ];
+        let currentSlideIndex = 0;
+
+        function openLightbox(index) {
+            currentSlideIndex = index;
+            document.getElementById('lightboxImg').src = galleryImages[index];
+            document.getElementById('lightboxCaption').innerHTML = galleryCaptions[index];
+            document.getElementById('customLightbox').style.display = 'block';
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeLightbox() {
+            document.getElementById('customLightbox').style.display = 'none';
+            document.body.style.overflow = 'auto';
+        }
+
+        function changeLightboxSlide(direction) {
+            currentSlideIndex += direction;
+            if (currentSlideIndex >= galleryImages.length) {
+                currentSlideIndex = 0;
+            } else if (currentSlideIndex < 0) {
+                currentSlideIndex = galleryImages.length - 1;
+            }
+            document.getElementById('lightboxImg').src = galleryImages[currentSlideIndex];
+            document.getElementById('lightboxCaption').innerHTML = galleryCaptions[currentSlideIndex];
+        }
+
+        document.getElementById('customLightbox').addEventListener('click', function(e) {
+            if (e.target === this || e.target.classList.contains('lightbox-content-wrapper')) {
+                closeLightbox();
+            }
+        });
+
+        // Clipboard Copy Logika
+        function copyToClipboard(text, buttonElement) {
+            navigator.clipboard.writeText(text).then(function() {
+                const toastEl = document.getElementById('copyToast');
+                const toast = new bootstrap.Toast(toastEl);
+                toast.show();
+
+                const originalText = buttonElement.innerHTML;
+                buttonElement.innerHTML = '<i class="bi bi-check-lg"></i> Tersalin!';
+                buttonElement.style.backgroundColor = 'var(--pink)';
+                buttonElement.style.color = '#ffffff';
+                buttonElement.style.borderColor = 'var(--pink)';
+                setTimeout(function() {
+                    buttonElement.innerHTML = originalText;
+                    buttonElement.style.backgroundColor = '';
+                    buttonElement.style.color = '';
+                    buttonElement.style.borderColor = '';
+                }, 2000);
+            }, function(err) {
+                console.error('Gagal menyalin teks: ', err);
+            });
+        }
+
+        // RSVP & Guest Book Logika
+        const STORAGE_KEY = 'wedding_wishes_data';
+
+        function getWishes() {
+            const data = localStorage.getItem(STORAGE_KEY);
+            return data ? JSON.parse(data) : [];
+        }
+
+        function saveWishes(wishes) {
+            localStorage.setItem(STORAGE_KEY, JSON.stringify(wishes));
+        }
+
+        function renderWishes() {
+            const wishes = getWishes();
+            const listEl = document.getElementById('guestbookList');
+            const countEl = document.getElementById('guestbook-count');
+            
+            countEl.textContent = wishes.length;
+
+            if (wishes.length === 0) {
+                document.getElementById('guestbookEmpty').style.display = 'block';
+                return;
+            } else {
+                document.getElementById('guestbookEmpty').style.display = 'none';
+            }
+
+            const sortedWishes = [...wishes].reverse();
+            
+            listEl.innerHTML = sortedWishes.map(wish => {
+                const initials = wish.name.split(' ').map(n => n[0]).slice(0, 2).join('').toUpperCase();
+                const badgeBg = wish.status === 'Hadir' ? 'bg-success' : 'bg-secondary';
+                const badgeText = wish.status === 'Hadir' ? 'Hadir' : 'Tidak Hadir';
+                
+                return `
+                    <div class="guestbook-item">
+                        <div class="guestbook-avatar">${initials}</div>
+                        <div class="guestbook-content">
+                            <div class="guestbook-header">
+                                <span class="guestbook-name">${escapeHTML(wish.name)}</span>
+                                <span class="badge ${badgeBg} ms-2">${badgeText}</span>
+                            </div>
+                            <span class="guestbook-time">${wish.time}</span>
+                            <p class="guestbook-message">${escapeHTML(wish.message)}</p>
+                        </div>
+                    </div>
+                `;
+            }).join('');
+        }
+
+        function escapeHTML(str) {
+            return str.replace(/[&<>'"]/g, 
+                tag => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', "'": '&#39;', '"': '&quot;' }[tag] || tag)
+            );
+        }
+
+        function handleRSVPSubmit(event) {
+            event.preventDefault();
+            
+            const name = document.getElementById('nama').value.trim();
+            const guests = document.getElementById('jumlah').value;
+            const status = document.querySelector('input[name="kehadiran"]:checked').value;
+            const message = document.getElementById('ucapan').value.trim();
+            
+            if (!name || !message) return;
+
+            const timeNow = new Date().toLocaleString('id-ID', { 
+                day: 'numeric', 
+                month: 'short', 
+                year: 'numeric', 
+                hour: '2-digit', 
+                minute: '2-digit' 
+            });
+
+            const newWish = {
+                name: name,
+                guests: guests,
+                status: status,
+                message: message,
+                time: timeNow
+            };
+
+            const wishes = getWishes();
+            wishes.push(newWish);
+            saveWishes(wishes);
+            renderWishes();
+
+            document.getElementById('rsvpForm').reset();
+            
+            const toastEl = document.getElementById('copyToast');
+            const toastBodyEl = toastEl.querySelector('.toast-body');
+            const originalBody = toastBodyEl.innerHTML;
+            
+            toastBodyEl.innerHTML = '<i class="bi bi-heart-fill text-danger"></i> Terima kasih atas RSVP & ucapan doa restunya!';
+            const toast = new bootstrap.Toast(toastEl);
+            toast.show();
+            
+            setTimeout(() => {
+                toastBodyEl.innerHTML = originalBody;
+            }, 2000);
+        }
+
+        window.addEventListener('DOMContentLoaded', () => {
+            renderWishes();
         });
     </script>
 </body>
