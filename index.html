@@ -1,0 +1,214 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Arya & Cika</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Sacramento&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <section id="hero" class="hero">
+
+        <!-- Dark overlay -->
+        <div class="hero-overlay"></div>
+
+        <!-- Main content -->
+        <div class="hero-content">
+
+            <!-- Top label -->
+            <div class="hero-label">
+                <span class="hero-label-line"></span>
+                <span class="hero-label-text">Wedding Invitation</span>
+                <span class="hero-label-line"></span>
+            </div>
+
+            <p class="hero-to">Kepada Bapak / Ibu / Saudara</p>
+
+            <h1 class="hero-names">Arya <span class="hero-amp">&amp;</span> Cika</h1>
+
+            <!-- Decorative separator -->
+            <div class="hero-sep">
+                <span class="hero-sep-line"></span>
+                <span class="hero-sep-icon">&#9825;</span>
+                <span class="hero-sep-line"></span>
+            </div>
+
+            <p class="hero-sub">Akan melangsungkan resepsi pernikahan dalam waktu :</p>
+
+            <div id="simply-countdown" class="simply-countdown"></div>
+
+            <a href="#undangan" class="hero-cta">Lihat Undangan</a>
+
+        </div>
+
+        <!-- Scroll indicator -->
+        <div class="hero-scroll">
+            <span class="hero-scroll-text">Scroll</span>
+            <div class="hero-scroll-bar"><div class="hero-scroll-dot"></div></div>
+        </div>
+
+    </section>
+
+    <!-- ===================== NAVBAR ===================== -->
+    <nav class="mynavbar" id="mainNavbar">
+      <div class="nav-inner">
+
+        <!-- Desktop: Left links -->
+        <div class="nav-links nav-links-left d-none d-md-flex">
+          <a class="nav-lnk" href="#home">Home</a>
+          <a class="nav-lnk" href="#info">Info</a>
+          <a class="nav-lnk" href="#story">Story</a>
+        </div>
+
+        <!-- Mobile: Hamburger -->
+        <button class="nav-toggler d-md-none" id="navToggler"
+          data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar"
+          aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
+          <span class="toggler-bar bar-top"></span>
+          <span class="toggler-bar bar-mid"></span>
+          <span class="toggler-bar bar-bot"></span>
+        </button>
+
+        <!-- Brand (always center) -->
+        <a class="nav-brand" href="#">Arcika</a>
+
+        <!-- Desktop: Right links -->
+        <div class="nav-links nav-links-right d-none d-md-flex">
+          <a class="nav-lnk" href="#gallery">Gallery</a>
+          <a class="nav-lnk" href="#rsv">RSV</a>
+          <a class="nav-lnk" href="#gifts">Gifts</a>
+        </div>
+
+        <!-- Mobile: spacer to keep brand centered -->
+        <div class="nav-spacer d-md-none"></div>
+
+      </div>
+    </nav>
+
+    <!-- ========= OFFCANVAS (Mobile only) ========= -->
+    <div class="offcanvas offcanvas-start mynavbar-oc" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+      <div class="offcanvas-header">
+        <span class="oc-brand" id="offcanvasNavbarLabel">Arcika</span>
+        <button type="button" class="oc-close-btn" data-bs-dismiss="offcanvas" aria-label="Close">
+          <span></span><span></span>
+        </button>
+      </div>
+      <div class="offcanvas-body oc-body">
+        <div class="oc-deco">
+          <div class="oc-deco-line"></div>
+          <span class="oc-deco-heart">&#9825;</span>
+          <div class="oc-deco-line"></div>
+        </div>
+        <nav class="oc-nav">
+          <a class="oc-lnk" href="#home"    data-bs-dismiss="offcanvas"><span>Home</span>   <i class="oc-arrow">&#8594;</i></a>
+          <a class="oc-lnk" href="#info"    data-bs-dismiss="offcanvas"><span>Info</span>   <i class="oc-arrow">&#8594;</i></a>
+          <a class="oc-lnk" href="#story"   data-bs-dismiss="offcanvas"><span>Story</span>  <i class="oc-arrow">&#8594;</i></a>
+          <a class="oc-lnk" href="#gallery" data-bs-dismiss="offcanvas"><span>Gallery</span><i class="oc-arrow">&#8594;</i></a>
+          <a class="oc-lnk" href="#rsv"     data-bs-dismiss="offcanvas"><span>RSV</span>    <i class="oc-arrow">&#8594;</i></a>
+          <a class="oc-lnk" href="#gifts"   data-bs-dismiss="offcanvas"><span>Gifts</span>  <i class="oc-arrow">&#8594;</i></a>
+        </nav>
+        <div class="oc-footer">
+          <span>Arya &amp; Cika &middot; 12 Oktober 2030</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- =================== HOME =================== -->
+    <section id="home" class="home">
+      <div class="container d-flex align-items-center justify-content-center" style="min-height:100vh;">
+        <div class="home-card">
+
+          <!-- Top tag -->
+          <div class="home-tag-row">
+            <span class="home-tag-line"></span>
+            <span class="home-tag-text">Wedding Reception</span>
+            <span class="home-tag-line"></span>
+          </div>
+
+          <!-- Main names -->
+          <h2 class="home-names">Arya <span class="home-amp">&amp;</span> Cika</h2>
+
+          <!-- Decorative divider -->
+          <div class="home-divider">&#9825;</div>
+
+          <!-- Date & venue -->
+          <p class="home-date">12 Oktober 2030</p>
+          <p class="home-venue">Bandung, Jawa Barat</p>
+
+          <!-- Description -->
+          <p class="home-desc">Dengan memohon ridho dan doa restunya, kami mengundang Bapak/Ibu/Saudara untuk hadir dalam acara pernikahan kami.</p>
+
+          <!-- CTA -->
+          <a href="#info" class="home-cta">Detail Acara</a>
+
+        </div>
+      </div>
+    </section>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+        crossorigin="anonymous"></script>
+
+    <script src="countdown/simplyCountdown.umd.js"></script>
+
+    <script>
+        simplyCountdown('#simply-countdown', {
+            year: 2030,
+            month: 10,
+            day: 12,
+            hours: 0,
+            minutes: 0,
+            seconds: 0
+        });
+
+        // Fix: Bootstrap salah hitung scrollbar width di mobile
+        // MutationObserver mencegat perubahan style body secara real-time
+        const offcanvasEl = document.getElementById('offcanvasNavbar');
+
+        offcanvasEl.addEventListener('show.bs.offcanvas', function () {
+            // Buat observer sekali pakai yang langsung reset padding-right saat Bootstrap menambahkannya
+            const observer = new MutationObserver(function () {
+                const pr = document.body.style.paddingRight;
+                if (pr && pr !== '0px') {
+                    document.body.style.setProperty('padding-right', '0px', 'important');
+                }
+                // Disconnect setelah pertama kali menangkap
+                observer.disconnect();
+            });
+            observer.observe(document.body, {
+                attributes: true,
+                attributeFilter: ['style']
+            });
+        });
+
+        offcanvasEl.addEventListener('hidden.bs.offcanvas', function () {
+            document.body.style.removeProperty('padding-right');
+            document.body.style.removeProperty('overflow');
+        });
+
+        // Hamburger open/close animation
+        const navToggler = document.getElementById('navToggler');
+        offcanvasEl.addEventListener('show.bs.offcanvas', () => navToggler.classList.add('is-open'));
+        offcanvasEl.addEventListener('hidden.bs.offcanvas', () => navToggler.classList.remove('is-open'));
+
+        // Navbar scroll effect
+        const mainNavbar = document.getElementById('mainNavbar');
+        window.addEventListener('scroll', function () {
+            if (window.scrollY > 60) {
+                mainNavbar.classList.add('scrolled');
+            } else {
+                mainNavbar.classList.remove('scrolled');
+            }
+        });
+    </script>
+</body>
+
+</html>

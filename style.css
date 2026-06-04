@@ -1,0 +1,815 @@
+:root {
+    --pink: #f14e95;
+    --bg: #0a0a0a;
+    --shadow: 0 2px 2px rgb(0 0 0 / 0.5);
+}
+
+body {
+    font-size: 1.2rem;
+    font-family: 'Work Sans', sans-serif;
+    min-height: 2000px;
+}
+
+/* =========================================
+   HERO — Premium Upgraded
+========================================= */
+
+.hero {
+    position: relative;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    text-align: center;
+}
+
+/* Background image with slow Ken Burns zoom */
+.hero::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background-image: url(img/ar.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    filter: grayscale(100%);
+    z-index: 0;
+    animation: heroZoom 22s ease-in-out infinite alternate;
+}
+
+@keyframes heroZoom {
+    from { transform: scale(1); }
+    to   { transform: scale(1.08); }
+}
+
+/* Dark gradient overlay */
+.hero-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+        180deg,
+        rgba(0,0,0,0.25) 0%,
+        rgba(0,0,0,0.45) 50%,
+        rgba(0,0,0,0.65) 100%
+    );
+    z-index: 1;
+}
+
+/* Content container */
+.hero-content {
+    position: relative;
+    z-index: 2;
+    color: white;
+    padding: 2rem 1.5rem;
+    max-width: 700px;
+    width: 100%;
+    animation: heroFadeUp 1.2s ease both;
+}
+
+@keyframes heroFadeUp {
+    from { opacity: 0; transform: translateY(28px); }
+    to   { opacity: 1; transform: translateY(0); }
+}
+
+/* Top label row */
+.hero-label {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    margin-bottom: 1.6rem;
+    animation: heroFadeUp 1s 0.2s ease both;
+}
+
+.hero-label-line {
+    width: 36px;
+    height: 1px;
+    background: rgba(255,255,255,0.35);
+}
+
+.hero-label-text {
+    font-size: 0.62rem;
+    font-weight: 700;
+    letter-spacing: 0.35em;
+    text-transform: uppercase;
+    color: rgba(255,255,255,0.65);
+}
+
+/* Recipient text */
+.hero-to {
+    font-size: 0.95rem;
+    color: rgba(255,255,255,0.7);
+    letter-spacing: 0.08em;
+    margin-bottom: 0.4rem;
+    animation: heroFadeUp 1s 0.35s ease both;
+}
+
+/* Main names */
+.hero-names {
+    font-family: 'Sacramento', cursive;
+    font-size: 7rem;
+    color: white;
+    line-height: 1;
+    margin-bottom: 0;
+    text-shadow: 0 4px 40px rgba(0,0,0,0.4);
+    animation: heroFadeUp 1s 0.5s ease both;
+}
+
+.hero-amp {
+    color: var(--pink);
+}
+
+/* Decorative separator */
+.hero-sep {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1.2rem;
+    margin: 1.6rem auto;
+    animation: heroFadeUp 1s 0.65s ease both;
+}
+
+.hero-sep-line {
+    width: 56px;
+    height: 1px;
+    background: rgba(255,255,255,0.25);
+}
+
+.hero-sep-icon {
+    color: var(--pink);
+    font-size: 1.1rem;
+    opacity: 0.75;
+}
+
+/* Countdown intro text */
+.hero-sub {
+    font-size: 0.9rem;
+    color: rgba(255,255,255,0.6);
+    letter-spacing: 0.04em;
+    margin-bottom: 1.8rem;
+    animation: heroFadeUp 1s 0.8s ease both;
+}
+
+/* Countdown container */
+.hero-content .simply-countdown {
+    animation: heroFadeUp 1s 1s ease both;
+}
+
+/* CTA Button */
+.hero-cta {
+    display: inline-block;
+    margin-top: 2.4rem;
+    font-size: 0.68rem;
+    font-weight: 700;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    color: white;
+    text-decoration: none;
+    border: 1px solid rgba(255,255,255,0.45);
+    padding: 1rem 3rem;
+    border-radius: 2px;
+    position: relative;
+    overflow: hidden;
+    transition: border-color 0.3s ease, color 0.3s ease;
+    animation: heroFadeUp 1s 1.2s ease both;
+}
+
+.hero-cta::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: var(--pink);
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.38s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    z-index: -1;
+}
+
+.hero-cta:hover {
+    color: white;
+    border-color: var(--pink);
+}
+
+.hero-cta:hover::before {
+    transform: scaleX(1);
+}
+
+/* ── Scroll indicator ── */
+.hero-scroll {
+    position: absolute;
+    bottom: 2.2rem;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+    animation: heroFadeIn 1s 2s ease both;
+}
+
+@keyframes heroFadeIn {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+
+.hero-scroll-text {
+    font-size: 0.5rem;
+    letter-spacing: 0.35em;
+    text-transform: uppercase;
+    color: rgba(255,255,255,0.35);
+}
+
+.hero-scroll-bar {
+    width: 1px;
+    height: 44px;
+    background: rgba(255,255,255,0.12);
+    position: relative;
+    overflow: hidden;
+}
+
+.hero-scroll-dot {
+    position: absolute;
+    top: -40%;
+    left: 0;
+    width: 100%;
+    height: 45%;
+    background: linear-gradient(to bottom, transparent, var(--pink));
+    animation: scrollDrop 1.8s ease-in-out infinite;
+}
+
+@keyframes scrollDrop {
+    0%   { top: -45%; opacity: 0; }
+    20%  { opacity: 1; }
+    100% { top: 100%; opacity: 0; }
+}
+
+/* =========================================
+   Simply Countdown — Custom Style
+========================================= */
+
+.simply-countdown {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1.25rem;
+    font-family: 'Work Sans', sans-serif;
+}
+
+.simply-countdown > .simply-section {
+    position: relative;
+    width: 100px;
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(255, 255, 255, 0.04);
+    border: 1px solid rgba(241, 78, 149, 0.25);
+    border-radius: 18px;
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    transition: all 0.35s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    overflow: hidden;
+    cursor: default;
+}
+
+/* Glow border saat hover */
+.simply-countdown > .simply-section::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    border-radius: 18px;
+    background: radial-gradient(ellipse at top, rgba(241, 78, 149, 0.12), transparent 70%);
+    opacity: 0;
+    transition: opacity 0.35s ease;
+}
+
+.simply-countdown > .simply-section:hover {
+    border-color: rgba(241, 78, 149, 0.6);
+    transform: translateY(-5px);
+    background: rgba(241, 78, 149, 0.06);
+    box-shadow:
+        0 16px 40px rgba(0, 0, 0, 0.5),
+        0 0 0 1px rgba(241, 78, 149, 0.15),
+        0 0 24px rgba(241, 78, 149, 0.12);
+}
+
+.simply-countdown > .simply-section:hover::after {
+    opacity: 1;
+}
+
+.simply-countdown > .simply-section > div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.25rem;
+    position: relative;
+    z-index: 1;
+}
+
+.simply-countdown > .simply-section .simply-amount {
+    font-size: 2.4rem;
+    font-weight: 600;
+    line-height: 1;
+    color: #ffffff;
+    letter-spacing: -0.03em;
+}
+
+.simply-countdown > .simply-section .simply-word {
+    font-size: 0.5rem;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 0.22em;
+    color: var(--pink);
+    opacity: 0.85;
+}
+
+
+/* =========================================
+   NAVBAR — Split-Center Layout
+========================================= */
+
+.mynavbar {
+    position: sticky;
+    top: 0;
+    z-index: 1030;
+    padding: 0;
+    transition: all 0.45s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    border-bottom: 1px solid transparent;
+}
+
+.mynavbar.scrolled {
+    background: rgba(8, 8, 8, 0.9) !important;
+    backdrop-filter: blur(24px);
+    -webkit-backdrop-filter: blur(24px);
+    border-bottom: 1px solid rgba(241, 78, 149, 0.12);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4);
+}
+
+/* Inner flex row */
+.nav-inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1.1rem 2rem;
+    transition: padding 0.45s ease;
+}
+
+.mynavbar.scrolled .nav-inner {
+    padding-top: 0.65rem;
+    padding-bottom: 0.65rem;
+}
+
+/* Brand — always centered via flex order trick */
+.nav-brand {
+    font-family: 'Sacramento', cursive;
+    font-size: 2.8rem;
+    color: white;
+    text-decoration: none;
+    line-height: 1;
+    order: 2;
+    transition: all 0.3s ease;
+    text-shadow: 0 0 24px rgba(241, 78, 149, 0.35);
+}
+
+.nav-brand:hover {
+    color: var(--pink);
+    text-shadow: 0 0 32px rgba(241, 78, 149, 0.7);
+}
+
+/* Left/right link groups */
+.nav-links {
+    display: flex;
+    align-items: center;
+    gap: 0.25rem;
+}
+
+.nav-links-left  { order: 1; }
+.nav-links-right { order: 3; }
+
+.nav-lnk {
+    font-size: 0.68rem;
+    font-weight: 700;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: rgba(255,255,255,0.75);
+    text-decoration: none;
+    padding: 0.45rem 0.9rem;
+    position: relative;
+    transition: color 0.3s ease;
+}
+
+.nav-lnk::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 0;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, var(--pink), transparent);
+    transition: width 0.35s ease;
+}
+
+.nav-lnk:hover {
+    color: white;
+}
+
+.nav-lnk:hover::after {
+    width: 70%;
+}
+
+/* Hamburger button (mobile) */
+.nav-toggler {
+    order: 1;
+    width: 42px;
+    height: 42px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 5.5px;
+    padding: 0;
+    background: transparent;
+    border: 1px solid rgba(255,255,255,0.2) !important;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: border-color 0.3s ease, background 0.3s ease;
+    flex-shrink: 0;
+}
+
+.nav-toggler:hover {
+    border-color: rgba(241,78,149,0.5) !important;
+    background: rgba(241,78,149,0.08);
+}
+
+.toggler-bar {
+    display: block;
+    width: 19px;
+    height: 1.5px;
+    background: white;
+    border-radius: 4px;
+    transition: all 0.35s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    transform-origin: center;
+}
+
+.nav-toggler.is-open .bar-top { transform: translateY(7px) rotate(45deg); }
+.nav-toggler.is-open .bar-mid { opacity: 0; transform: scaleX(0); }
+.nav-toggler.is-open .bar-bot { transform: translateY(-7px) rotate(-45deg); }
+
+/* Spacer on mobile to mirror hamburger width and keep brand centered */
+.nav-spacer {
+    order: 3;
+    width: 42px;
+    flex-shrink: 0;
+}
+
+/* ── Offcanvas panel ── */
+.mynavbar-oc {
+    width: 100% !important;
+    max-width: 320px;
+    background: #080808;
+    border-right: 1px solid rgba(241,78,149,0.1) !important;
+}
+
+.mynavbar-oc .offcanvas-header {
+    padding: 1.6rem 2rem;
+    border-bottom: 1px solid rgba(241,78,149,0.1);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.oc-brand {
+    font-family: 'Sacramento', cursive;
+    font-size: 2.4rem;
+    color: var(--pink);
+    line-height: 1;
+    text-shadow: 0 0 20px rgba(241,78,149,0.3);
+}
+
+/* Custom ✕ close button */
+.oc-close-btn {
+    width: 34px;
+    height: 34px;
+    background: transparent;
+    border: 1px solid rgba(255,255,255,0.12);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    position: relative;
+    transition: border-color 0.3s ease, background 0.3s ease;
+    flex-shrink: 0;
+}
+
+.oc-close-btn:hover {
+    border-color: var(--pink);
+    background: rgba(241,78,149,0.1);
+}
+
+.oc-close-btn span {
+    display: block;
+    width: 14px;
+    height: 1.5px;
+    background: rgba(255,255,255,0.8);
+    position: absolute;
+    border-radius: 4px;
+    transition: background 0.3s ease;
+}
+
+.oc-close-btn:hover span { background: var(--pink); }
+.oc-close-btn span:first-child { transform: rotate(45deg); }
+.oc-close-btn span:last-child  { transform: rotate(-45deg); }
+
+/* Offcanvas body */
+.oc-body {
+    padding: 2rem 2rem 1.5rem;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Decorative divider */
+.oc-deco {
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+    margin-bottom: 2rem;
+}
+
+.oc-deco-line {
+    flex: 1;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, rgba(241,78,149,0.35));
+}
+
+.oc-deco-line:last-child {
+    background: linear-gradient(270deg, transparent, rgba(241,78,149,0.35));
+}
+
+.oc-deco-heart {
+    font-size: 1rem;
+    color: var(--pink);
+    opacity: 0.55;
+}
+
+/* Offcanvas nav links */
+.oc-nav { display: flex; flex-direction: column; gap: 0; }
+
+.oc-lnk {
+    font-size: 0.72rem;
+    font-weight: 700;
+    letter-spacing: 0.28em;
+    text-transform: uppercase;
+    color: rgba(255,255,255,0.5);
+    text-decoration: none;
+    padding: 1rem 0;
+    border-bottom: 1px solid rgba(255,255,255,0.05);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    transition: color 0.3s ease, padding-left 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.oc-lnk::before {
+    content: '';
+    position: absolute;
+    left: 0; top: 0;
+    height: 100%;
+    width: 0;
+    background: linear-gradient(90deg, rgba(241,78,149,0.07), transparent);
+    transition: width 0.4s ease;
+}
+
+.oc-arrow {
+    font-style: normal;
+    font-size: 0.85rem;
+    color: var(--pink);
+    opacity: 0;
+    transform: translateX(-6px);
+    transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.oc-lnk:hover { color: white; padding-left: 0.6rem; }
+.oc-lnk:hover::before { width: 100%; }
+.oc-lnk:hover .oc-arrow { opacity: 1; transform: translateX(0); }
+
+/* Offcanvas footer */
+.oc-footer {
+    margin-top: auto;
+    padding-top: 2rem;
+    text-align: center;
+}
+
+.oc-footer span {
+    font-family: 'Sacramento', cursive;
+    font-size: 1.3rem;
+    color: rgba(241,78,149,0.35);
+}
+
+/* =========================================
+   HOME SECTION — Elegant Card
+========================================= */
+
+.home-card {
+    text-align: center;
+    padding: 4rem 3rem;
+    max-width: 600px;
+    width: 100%;
+    background: rgba(255,255,255,0.72);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    border: 1px solid rgba(255,255,255,0.9);
+    border-radius: 4px;
+    box-shadow:
+        0 24px 60px rgba(0,0,0,0.08),
+        0 0 0 1px rgba(255,255,255,0.6) inset;
+}
+
+.home-tag-row {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 2rem;
+}
+
+.home-tag-line {
+    flex: 1;
+    height: 1px;
+    background: rgba(241,78,149,0.3);
+}
+
+.home-tag-text {
+    font-size: 0.65rem;
+    font-weight: 700;
+    letter-spacing: 0.3em;
+    text-transform: uppercase;
+    color: var(--pink);
+    white-space: nowrap;
+}
+
+.home-names {
+    font-family: 'Sacramento', cursive;
+    font-size: 5rem;
+    color: #1a1a1a;
+    line-height: 1;
+    margin-bottom: 0.5rem;
+}
+
+.home-amp {
+    color: var(--pink);
+}
+
+.home-divider {
+    font-size: 1.4rem;
+    color: var(--pink);
+    opacity: 0.5;
+    margin: 1rem 0;
+}
+
+.home-date {
+    font-size: 1rem;
+    font-weight: 700;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: #1a1a1a;
+    margin-bottom: 0.25rem;
+}
+
+.home-venue {
+    font-size: 0.85rem;
+    letter-spacing: 0.1em;
+    color: rgba(0,0,0,0.5);
+    text-transform: uppercase;
+    margin-bottom: 1.8rem;
+}
+
+.home-desc {
+    font-size: 0.95rem;
+    line-height: 1.8;
+    color: rgba(0,0,0,0.6);
+    margin-bottom: 2.2rem;
+    max-width: 420px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.home-cta {
+    display: inline-block;
+    font-size: 0.68rem;
+    font-weight: 700;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--pink);
+    text-decoration: none;
+    border: 1px solid var(--pink);
+    padding: 0.85rem 2.4rem;
+    border-radius: 2px;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.home-cta::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: var(--pink);
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.35s ease;
+    z-index: -1;
+}
+
+.home-cta:hover {
+    color: white;
+}
+
+.home-cta:hover::before {
+    transform: scaleX(1);
+}
+
+
+.home {
+    background-image: url(img/1.jpg);
+    background-size: cover;
+    background-position: center;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    padding: 4rem 0;
+}
+
+
+/* Responsive */
+@media (max-width: 480px) {
+    .simply-countdown {
+        gap: 0.75rem;
+    }
+
+    .simply-countdown > .simply-section {
+        width: 72px;
+        height: 72px;
+        border-radius: 14px;
+    }
+
+    .simply-countdown > .simply-section .simply-amount {
+        font-size: 1.75rem;
+    }
+
+    .simply-countdown > .simply-section .simply-word {
+        font-size: 0.42rem;
+        letter-spacing: 0.15em;
+    }
+}
+
+@media (min-width: 768px) {
+    .simply-countdown > .simply-section {
+        width: 120px;
+        height: 120px;
+    }
+
+    .simply-countdown > .simply-section .simply-amount {
+        font-size: 3rem;
+    }
+
+    .simply-countdown > .simply-section .simply-word {
+        font-size: 0.6rem;
+    }
+}
+
+/* media query */
+/* laptop */
+@media (max-width: 992px) {
+    html {
+        font-size: 65%;
+    }
+}
+/* tablet */
+@media (max-width: 768px) {
+    html {
+        font-size: 60%;
+    }
+}
+
+/* mobile */
+@media (max-width: 576px) {
+    html {
+        font-size: 55%;
+    }
+}
+
+/* Fix Bootstrap offcanvas padding-right bug on mobile */
+body.offcanvas-open {
+    padding-right: 0 !important;
+    overflow: hidden !important;
+}
+
+.offcanvas-open .sticky-top,
+.offcanvas-open .fixed-top {
+    padding-right: 0 !important;
+}
